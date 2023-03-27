@@ -7,5 +7,9 @@ func Sum(numbers []int) int {
 		return 0
 	}
 
+	if len(numbers) == 1 {
+		return numbers[0]
+	}
+
 	return numbers[0] + Sum(numbers[1:])
 }
