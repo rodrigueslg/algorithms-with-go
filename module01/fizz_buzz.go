@@ -31,9 +31,6 @@ func FizzBuzz(n int) {
 		if i < n {
 			fmt.Print(", ")
 		}
-
-		if i == n {
-			fmt.Print("\n")
-		}
 	}
+	fmt.Print("\n")
 }
