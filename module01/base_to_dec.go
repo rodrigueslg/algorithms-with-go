@@ -13,14 +13,17 @@ import (
 //	BaseToDec("E", 16) => 14
 //	BaseToDec("1110", 2) => 14
 func BaseToDec(value string, base int) int {
-	var sum int
+	if base > 16 {
+		println("max base is 16")
+		return 0
+	}
 
+	var sum int
 	for i, r := range value {
 		num := letterToNumber(r)
 		pow := math.Pow(float64(base), float64(len(value)-i-1))
 		sum += num * int(pow)
 	}
-
 	return sum
 }
 
