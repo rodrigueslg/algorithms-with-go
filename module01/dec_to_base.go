@@ -24,7 +24,9 @@ func DecToBase(dec, base int) string {
 	var result strings.Builder
 	calc(dec, base, &result)
 
+	// use the Reverse func when the calc() func does'nt append new digits to the left
 	//return Reverse(result.String())
+
 	return result.String()
 }
 
